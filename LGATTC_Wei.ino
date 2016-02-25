@@ -122,12 +122,12 @@ void charInProcessing(const LGATTUUID &serviceUUID, boolean isPrimary, const LGA
 
     // write characteristic
     //if ((properties & LGATT_CHAR_PROP_WRITE) == LGATT_CHAR_PROP_WRITE)
-    if (properties & LGATT_CHAR_PROP_WRITE)
+    if (properties == LGATT_CHAR_PROP_WRITE)
     {
         /* you can prepare data for the specified characteristic with write property here */
         i++; //test msg
         Serial.println("[LGATTC ino] write characteristic");
-        char szbuf[] = "MSG"; // somedata will be sent to prepherial
+        char szbuf[] = "I'm tku YOU WEI LIN MSG"; // somedata will be sent to prepherial
         //sprintf(szbuf,"MSG:%s",i);
         
         Serial.printf("[LGATTC ino] Client will write [%s] to Server.",szbuf);
